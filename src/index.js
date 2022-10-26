@@ -1,4 +1,5 @@
 import React from "react";
+import SiteHeader from './components/siteHeader'
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 import {Link} from 'react-router-dom'
 import {createRoot} from "react-dom/client";
@@ -9,14 +10,14 @@ import MovieReviewPage from "./pages/movieReviewPage";
 const App = () => {
   return (
     <BrowserRouter>
-      <ul>
+        <SiteHeader /> { <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/movies/favourites">Favourites</Link>
         </li>
-      </ul>
+      </ul> }
       <Routes>
         <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
         <Route path="/movies/:id" element={<MoviePage />} />
