@@ -26,14 +26,16 @@ const MovieHeader = (props) => {
         >
         <CardHeader
         avatar={
-         // favouriteMovies.includes(movie)
-          favouriteMovies.some(e => e.id === movie.id)?
+          
+          //favouriteMovies.includes(movie)
+
+        ()=>{ if (favouriteMovies!=null) favouriteMovies.some(e => e.id === movie.id)?
         (<Avatar sx={{ backgroundColor: 'red' }}>
               <FavoriteIcon/>
              
         
            
-           </Avatar>) : null} 
+           </Avatar>) : null} }
           ></CardHeader>
       <IconButton aria-label="go back">
         <ArrowBackIcon color="primary" fontSize="large" />
